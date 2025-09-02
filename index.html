@@ -81,7 +81,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url('https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&w=1600&q=80')
+    background: url('pics/header.png')
       center/cover no-repeat;
     filter: blur(14px) brightness(0.65);
     transform: scale(1.08);
@@ -198,9 +198,7 @@
     box-shadow: 0 18px 50px rgba(2,6,23,.18);
   }
 
-  /* Testimonials */
-  .testimonial { font-style: italic; color: #475569; }
-  .quote-mark { font-size: 2rem; opacity: .22; }
+
 
   /* Footer */
   footer { background: #0b1020; color: #94a3b8; padding: 2rem 0; }
@@ -299,6 +297,79 @@
   }
 </style>
 
+<style>
+  /* Gradient Button */
+  .btn-gradient {
+    background: linear-gradient(135deg, #4cc9f0, #4361ee, #3a0ca3);
+    border: none;
+    color: white;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  .btn-gradient:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(76, 201, 240, 0.5);
+  }
+
+  /* Input Styling */
+  .custom-input {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+  .custom-input:focus {
+    border: 1px solid #4cc9f0;
+    box-shadow: 0 0 8px #4cc9f0;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  /* Modal Animation */
+  .modal-content {
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+  }
+  .modal.show .modal-content {
+    transform: scale(1);
+  }
+</style>
+
+<style>
+  /* Feature Cards */
+  .feature-card {
+    background: #2b2b3a;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  }
+
+  /* Feature Image */
+  .feature-img {
+    width: 120px; 
+    height: 120px; 
+    object-fit: cover; 
+    border: 4px solid #1a1a2e; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  }
+
+  /* Stats Cards */
+  .stat-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .stat-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  }
+</style>
+
+
 
 
 </head>
@@ -316,8 +387,8 @@
         <ul class="navbar-nav align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#coaches">Testimonials</a></li>
-          <li class="nav-item"><a class="btn btn-primary ms-lg-3 mt-3 mt-lg-0" href="https://calendly.com/ricaldesara/connect">Book Call</a></li>
+          <li class="nav-item"><a class="nav-link" href="#why-it-va">Why Me?</a></li>
+          <li class="btn btn-lg btn-gradient px-5 py-2" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -331,7 +402,7 @@
       <div class="col-lg-7" data-animate>
         <div class="hero-card mb-3">
           <i class="bi bi-lightning-charge-fill"></i>
-          <span class="small">IT Virtual Assistant • Tech Support • Web Admin • Systems Specialist</span>
+          <span class="small">Virtual IT Staff• Tech Support • Web Admin • Systems Specialist</span>
         </div>
         <h1 class="display-4 fw-bold mb-3">
          Offload IT tasks.<br>I’ll handle the tech, you lead the way.
@@ -339,12 +410,12 @@
         <p class="lead mb-4">
           I handle your IT support, system management, website maintenance, and tech tasks, so you can focus on growth and strategy.
         </p>
-        <a class="btn btn-primary btn-lg px-4" href="#contact">Book a Free Call</a>
+        <a class="btn btn-lg btn-gradient px-5 py-2" data-bs-toggle="modal" data-bs-target="#contactModal">🤝 Let’s Talk</a>
       </div>
 
       <div class="col-lg-5 text-center mt-2 mt-lg-0" data-animate>
         <img 
-          src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&w=800&q=80" 
+          src="pics/header.png" 
           alt="IT Virtual Assistant workspace"
           class="img-fluid rounded-3 shadow"
           style="max-width: 520px; width: 100%; object-fit: cover;">
@@ -363,7 +434,7 @@
       <div class="col-lg-5 text-center" data-animate>
         <div class="about-wrap">
           <img 
-            src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80" 
+            src="pics/JMPIC.jpg" 
             alt="IT VA profile" 
             class="about-img" 
             loading="lazy" 
@@ -374,54 +445,14 @@
         <h2 class="fw-bold mb-4">About Me</h2>
         <p class="lead">Tech tasks taking your time? Let me handle them.</p>
         <p>I’m an IT Virtual Assistant specializing in technical support, website maintenance, cloud services, data management, and system optimization. I make sure your IT operations run smoothly so you can focus on scaling your business.</p>
+        <p>- John Mark Tolentino</p>
       </div>
     </div>
   </div>
 </section>
 
-    <!-- Numbers -->
-    <section class="bg-light text-center">
-      <div class="container px-3 px-md-4">
-        <h2 class="fw-bold mb-4">By the Numbers</h2>
-        <p class="lead mb-5">Delegating to a Virtual Assistant doesn’t just save time — it drives results:</p>
-        <div class="row g-4">
-          <div class="col-sm-6 col-md-3" data-animate>
-            <div class="card border-0">
-              <div class="stat">
-                <h3>10–15%</h3>
-                <p> more time for growth</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3" data-animate>
-            <div class="card border-0">
-              <div class="stat">
-                <h3>78%</h3>
-                <p>lower cost than hiring</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3" data-animate>
-            <div class="card border-0">
-              <div class="stat">
-                <h3>13%</h3>
-                <p>boost in productivity</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3" data-animate>
-            <div class="card border-0">
-              <div class="stat">
-                <h3>50%</h3>
-                <p>lower turnover with VA support</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    >
+    
           </div>
           <div cl<!-- Services -->
 <section id="services">
@@ -433,7 +464,7 @@
     <div class="row g-4">
       <div class="col-md-4" data-animate>
   <div class="card h-100">
-    <img src="https://images.unsplash.com/photo-1581090700227-4c4f50b0cabe?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" 
+    <img src="pics/techsupport.png" 
          class="card-img-top" 
          alt="Tech Support">
     <div class="card-body">
@@ -442,8 +473,9 @@
         <li>Remote troubleshooting</li>
         <li>Software installation</li>
         <li>Cloud setup & backups</li>
-        <li>Network monitoring</li>
-        <li>VPN support</li>
+        <li>System Testing</li>
+        <li>Remote desktop support</li>
+        
       </ul>
     </div>
   </div>
@@ -451,17 +483,18 @@
 
 <div class="col-md-4" data-animate>
   <div class="card h-100">
-    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" 
+    <img src="pics/websystem2.png" 
          class="card-img-top" 
          alt="Web & Systems">
     <div class="card-body">
       <h4 class="fw-bold text-success mb-3"><i class="bi bi-window"></i> Web & Systems</h4>
       <ul class="list-unstyled mb-0">
-        <li>Website management</li>
+        <li>Website Development and management</li>
         <li>Domain & hosting</li>
-        <li>System automation</li>
-        <li>Database support</li>
+        <li>SEO Optimization</li>
+        <li>Custom website design</li>
         <li>Code Debugging</li>
+        <li>Containerization & Orchestration: Docker, Kubernetes</li>
       </ul>
     </div>
   </div>
@@ -469,15 +502,16 @@
 
       <div class="col-md-4" data-animate>
         <div class="card h-100">
-          <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Admin">
+          <img src="pics/cloudadmin.png" class="card-img-top" alt="Admin">
           <div class="card-body">
             <h4 class="fw-bold text-danger mb-3"><i class="bi bi-hdd-network"></i> IT Admin</h4>
             <ul class="list-unstyled mb-0">
               <li>User account setup</li>
               <li>Helpdesk services</li>
-              <li>Documentation</li>
-              <li>Asset management</li>
-              <li>Email & workspace setup</li>
+              <li>Incident response</li>
+              <li>Technical troubleshooting</li>
+              <li>Server administration</li>
+              <li>Virtualization management</li>
             </ul>
           </div>
         </div>
@@ -489,23 +523,120 @@
 
 
 
+
+
+
+<section id="why-it-va" class="py-5" style="background: linear-gradient(135deg, #0a0f1c, #1a1a2e); color: white;">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-5">Why Work With a Virtual IT?</h2>
+      <p class="lead text-light" style="max-width: 600px; margin: auto;">
+        Elevate your business with expert IT virtual assistance — 
+        efficiency, savings, and peace of mind, all in one.
+      </p>
+    </div>
+
+    <!-- Features -->
+    <div class="row g-4 mb-5">
+
+<!-- Feature 1 -->
+<div class="col-md-4">
+  <div class="feature-card text-center p-4 rounded-4 shadow-lg h-100">
+    <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" 
+         alt="Save Time and Money" 
+         class="img-fluid rounded-circle mb-3 feature-img">
+    <h5 class="fw-bold mb-2">Save Time & Money</h5>
+    <p class="text-light opacity-75 mb-0">Streamline your IT tasks while cutting unnecessary costs. Focus on growth, not tech headaches.</p>
+  </div>
+</div>
+
+<!-- Feature 2 -->
+<div class="col-md-4">
+  <div class="feature-card text-center p-4 rounded-4 shadow-lg h-100">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" 
+         alt="Expert Help" 
+         class="img-fluid rounded-circle mb-3 feature-img">
+    <h5 class="fw-bold mb-2">Expert Help On-Demand</h5>
+    <p class="text-light opacity-75 mb-0">Get IT expertise when you need it — no full-time hiring required. Flexible, scalable support at your fingertips.</p>
+  </div>
+</div>
+
+<!-- Feature 3 -->
+<div class="col-md-4">
+  <div class="feature-card text-center p-4 rounded-4 shadow-lg h-100">
+    <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" 
+         alt="Peace of Mind" 
+         class="img-fluid rounded-circle mb-3 feature-img">
+    <h5 class="fw-bold mb-2">Peace of Mind</h5>
+    <p class="text-light opacity-75 mb-0">Your IT systems stay secure and optimized while you focus on what matters most: growing your business.</p>
+  </div>
+</div>
+
+
+    </div>
+
+    <!-- Stats Row -->
+    <div class="row text-center g-4">
+      <div class="col-6 col-md-3">
+        <div class="stat-card p-3 rounded-3">
+          <h3 class="fw-bold text-info">10–15%</h3>
+          <p class="mb-0 text-light opacity-75">More time for growth</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card p-3 rounded-3">
+          <h3 class="fw-bold text-success">78%</h3>
+          <p class="mb-0 text-light opacity-75">Lower cost than hiring</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card p-3 rounded-3">
+          <h3 class="fw-bold text-warning">13%</h3>
+          <p class="mb-0 text-light opacity-75">Boost in productivity</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card p-3 rounded-3">
+          <h3 class="fw-bold text-primary">50%</h3>
+          <p class="mb-0 text-light opacity-75">Lower turnover with VA support</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
     <section id="systems" class="py-16 bg-white">
   <div class="container mx-auto px-4 text-center">
     <h2 class="text-3xl font-bold mb-12">Systems &amp; Proficiencies</h2>
     
     <div class="systems-grid">
-<img src="https://cdn.worldvectorlogo.com/logos/asana-1.svg" alt="Asana" />
-<img src="pics/monday.png" alt="Monday.com" />
-<img src="pics/trello.png" alt="Trello" />
-<img src="pics/Mailchimp.jpg" alt="Mailchimp" />
-<img src="pics/mailer lite.png" alt="MailerLite" />
+<!-- PHP (Simple Icons CDN, brand color) -->
+<img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP" />
+
+<!-- JavaScript (Simple Icons CDN, brand color) -->
+<img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" />
+
+<!-- WordPress -->
+<img src="https://cdn.worldvectorlogo.com/logos/wordpress-icon.svg" alt="WordPress" />
+
+<!-- cPanel -->
+<img src="https://cdn.worldvectorlogo.com/logos/cpanel.svg" alt="cPanel" />
+
+<!-- Squarespace -->
 <img src="https://cdn.worldvectorlogo.com/logos/squarespace.svg" alt="Squarespace" />
-<img src="pics/kajabi.jpg" alt="Kajabi" />
-<img src="https://cdn.worldvectorlogo.com/logos/vimeo-icon.svg" alt="Vimeo" />
-<img src="pics/filmora_logo.png" alt="Filmora" />
-<img src="pics/canva.png" alt="Canva" />
-<img src="https://cdn.worldvectorlogo.com/logos/google-g-2015.svg" alt="Google Workspace" />
-<img src="https://cdn.worldvectorlogo.com/logos/zapier.svg" alt="Zapier" />
+
+<!-- Namecheap -->
+<img src="https://cdn.simpleicons.org/namecheap/DE3723" alt="Namecheap" />
+
+
+<!-- Hostinger -->
+<img src="https://cdn.worldvectorlogo.com/logos/hostinger.svg" alt="Hostinger" />
 
 
     </div>
@@ -515,54 +646,51 @@
 
 
 
-<section id="coaches" class="py-12 bg-gray-100">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-12">What my clients say about my work...</h2>
-    
-    <div class="coaches-grid">
-      <!-- Voy Wiacek -->
-      <div class="coach-card">
-        <h3 class="text-xl font-semibold">Voy Wiacek</h3>
-        <p class="mb-4">Men’s Life Coach</p>
-        <div class="video-container">
-          <iframe 
-            src="https://www.youtube.com/embed/aexzpepI5uU" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-
-      <!-- Brian Jenkins -->
-      <div class="coach-card">
-        <h3 class="text-xl font-semibold">Brian Jenkins</h3>
-        <p class="mb-4">Self Mastery and Leadership Coach</p>
-        <div class="video-container">
-          <iframe 
-            src="https://www.youtube.com/embed/mSQcTkoPf1E" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </div>
+<!-- Contact Section -->
+<section style="background: linear-gradient(135deg, #0a0a0f, #1a1a2e); color: white; padding: 80px 0;">
+  <div class="container text-center">
+    <h2 class="fw-bold display-5 mb-3">Let’s Work Together</h2>
+    <p class="lead text-light mb-4" style="max-width: 600px; margin: auto;">
+      Have a project in mind or need IT Virtual Assistance? Reach out and let's discuss how I can help your business grow!
+    </p>
+    <button class="btn btn-lg btn-gradient px-5 py-3 mt-3" data-bs-toggle="modal" data-bs-target="#contactModal">
+      🤝 Let’s Talk
+    </button>
   </div>
 </section>
 
-
-
-    <!-- CTA -->
-    <section id="book-call" class="text-center text-white" style="background: linear-gradient(to right, #111827, #1f2937);">
-
-      <div class="container px-3 px-md-4 py-5">
-        <h2 class="fw-bold mb-4">Ready to delegate and grow your business?</h2>
-        <a href="https://calendly.com/ricaldesara/connect" class="btn btn-light btn-lg fw-bold">Book a Free Call</a>
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="background: rgba(15, 15, 30, 0.95); border: none; border-radius: 20px;">
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-white fw-bold" id="contactModalLabel">Get In Touch</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </section>
+      <div class="modal-body">
+        <form id="contactForm" class="p-3">
+          <div class="mb-3">
+            <label for="name" class="form-label fw-semibold text-light">Your Name</label>
+            <input type="text" class="form-control custom-input" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label fw-semibold text-light">Your Email</label>
+            <input type="email" class="form-control custom-input" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label fw-semibold text-light">Your Message</label>
+            <textarea class="form-control custom-input" id="message" rows="4" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-gradient px-5 py-2">🚀 Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
   </main>
 
@@ -641,5 +769,22 @@
       btn.addEventListener('click', ()=> window.scrollTo({ top: 0, behavior: 'smooth' }));
     })();
   </script>
+
+
+<script> <!-- Contact form handling -->
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    
+    const subject = encodeURIComponent("New message from " + name);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    
+    window.location.href = `mailto:tech.tolentinojohnmark@gmail.com?subject=${subject}&body=${body}`;
+  });
+</script>
+
 </body>
 </html>
