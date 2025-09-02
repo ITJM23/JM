@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Portfolio Projects of John Mark Tolentino, Virtual IT Assistant." />
+  <meta name="author" content="John Mark Tolentino" />
+  <title>Projects | John Mark Tolentino</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+  <!-- Bootstrap CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Page styles (keeps look consistent with your index) -->
+  <style>
+    :root{
+      --bg:#ffffff; --text:#0f172a; --muted:#64748b;
+      --primary:#4f46e5; --primary-2:#3b82f6; --shadow:0 10px 30px rgba(2,6,23,0.10);
+      --radius-xl:18px; --transition:all .3s ease;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Inter',sans-serif;line-height:1.7;background:var(--bg);color:var(--text)}
+
+    /* Navbar */
+    .navbar{background:rgba(2,6,23,0.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:var(--shadow)}
+    .navbar .nav-link{color:#fff}
+    .btn-gradient{background:linear-gradient(135deg,#4cc9f0,#4361ee,#3a0ca3);color:#fff;border-radius:50px;border:none;font-weight:700;transition:var(--transition)}
+    .btn-gradient:hover{transform:scale(1.03)}
+
+    header.hero{
+      position:relative; padding:6.5rem 0 4rem; min-height:28vh; color:white; text-align:center;
+      background: linear-gradient(180deg, rgba(10,10,15,.75), rgba(10,10,15,.85));
+      background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80");
+      background-size:cover; background-position:center;
+    }
+    header.hero .overlay{background:rgba(11,16,32,.45);position:absolute;inset:0;z-index:0}
+    header.hero .container{position:relative;z-index:1}
+
+    /* Controls */
+    .controls{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;justify-content:center;margin-bottom:1.4rem}
+    .controls .btn{border-radius:12px}
+    .controls .form-control{min-width:220px;max-width:420px;border-radius:12px}
+
+    /* Grid & Cards */
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem}
+    .project-card{border-radius:14px;overflow:hidden;background:#fff;border:1px solid #e6e9ef;box-shadow:var(--shadow);position:relative;transition:transform .28s ease,box-shadow .28s ease}
+    .project-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(2,6,23,.12)}
+    .project-media{aspect-ratio:16/10;object-fit:cover;width:100%;display:block}
+    .project-body{padding:1rem}
+    .project-title{font-weight:700;margin-bottom:.35rem}
+    .project-desc{color:var(--muted);font-size:.95rem;margin-bottom:.6rem}
+    .project-tags{gap:.35rem;display:flex;flex-wrap:wrap}
+
+    /* overlay actions */
+    .card-overlay{
+      position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;padding:1rem;background:linear-gradient(180deg,transparent,rgba(2,6,23,.45));
+      opacity:0;transform:translateY(8px);transition:all .28s ease;
+    }
+    .project-card:hover .card-overlay{opacity:1;transform:translateY(0)}
+    .overlay-actions{display:flex;gap:.5rem}
+
+    /* modal carousel image */
+    .modal-img{width:100%;height:60vh;object-fit:cover;border-radius:8px}
+
+    /* small helpers */
+    .badge-tag{background:linear-gradient(90deg,var(--primary),var(--primary-2));color:white;padding:.35rem .55rem;border-radius:999px;font-weight:600}
+    .chip{background:#f1f5f9;padding:.25rem .5rem;border-radius:999px;font-size:.85rem;color:var(--muted)}
+
+    /* animate reveal (same as index) */
+    [data-animate]{opacity:0;transform:translateY(18px) scale(.99);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+    [data-animate].visible{opacity:1;transform:none}
+
+    footer{background:#0b1020;color:#94a3b8;padding:2rem 0}
+    @media(max-width:768px){ header.hero{padding:5rem 0} .controls{justify-content:center} }
+  </style>
+</head>
+<body class="d-flex flex-column h-100" tabindex="0">
+
+  <!-- Navbar (same look/function as your index) -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+    <div class="container px-3 px-md-4">
+      <a class="navbar-brand fw-bold" href="index.html">John Mark Tolentino</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#why-it-va">Why Me?</a></li>
+          <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+          <li class="nav-item ms-2"><a class="btn btn-gradient px-4 py-2" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-shrink-0">
+
+    <!-- Hero -->
+    <header class="hero text-center text-white" style="margin-top:56px;">
+      <div class="overlay"></div>
+      <div class="container py-5">
+        <h1 class="display-5 fw-bold" data-animate>Projects & Case Studies</h1>
+        <p class="lead text-light mb-4" data-animate style="max-width:900px;margin:auto">
+          Real IT, web, and systems work — delivered with measurable impact. Click a project card to view images and details.
+        </p>
+
+        <!-- Controls -->
+        <div class="controls" data-animate>
+          <div class="btn-group" role="group" aria-label="Filters">
+            <button class="btn btn-sm btn-outline-light active" data-filter="all">All</button>
+            <button class="btn btn-sm btn-outline-light" data-filter="web">Web</button>
+            <button class="btn btn-sm btn-outline-light" data-filter="cloud">Cloud</button>
+            <button class="btn btn-sm btn-outline-light" data-filter="automation">Automation</button>
+            <button class="btn btn-sm btn-outline-light" data-filter="devops">DevOps</button>
+            <button class="btn btn-sm btn-outline-light" data-filter="security">Security</button>
+          </div>
+
+          <input id="searchInput" class="form-control form-control-sm ms-2" type="search" placeholder="Search projects (title, tags)">
+
+          <select id="sortSelect" class="form-select form-select-sm ms-2" style="max-width:170px">
+            <option value="newest" selected>Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="az">Name A–Z</option>
+            <option value="za">Name Z–A</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section class="py-5">
+      <div class="container px-3 px-md-4">
+        <div class="text-center mb-4" data-animate>
+          <h2 class="fw-bold">Featured Projects</h2>
+          <p class="text-muted">Filter, search, and browse projects. Each project opens a lightbox carousel with more images and details.</p>
+        </div>
+
+        <div id="projectsGrid" class="projects-grid" data-animate>
+
+        <article class="project-card" tabindex="0"
+            data-category="web"
+            data-title="To God Be The Glory Banaba — Church Website"
+            data-date="2025-01-10"
+            data-tags="WordPress,Church,Ministry"
+            data-desc="Developed and maintained the official website of TGBTG Banaba to serve as an online hub for services, events, and ministry resources."
+            data-images='[
+            "https://tgbtgbanaba.org/wp-content/uploads/2024/05/church-front.jpg",
+            "https://tgbtgbanaba.org/wp-content/uploads/2024/05/worship-service.jpg",
+            "https://tgbtgbanaba.org/wp-content/uploads/2024/05/youth-ministry.jpg"
+            ]'
+            data-link="https://tgbtgbanaba.org">
+            
+            <img class="project-media" loading="lazy"
+                src="https://tgbtgbanaba.org/wp-content/uploads/2024/05/church-front.jpg"
+                srcset="https://tgbtgbanaba.org/wp-content/uploads/2024/05/church-front.jpg 900w, https://tgbtgbanaba.org/wp-content/uploads/2024/05/church-front.jpg 1600w"
+                alt="To God Be The Glory Banaba Church">
+            
+            <div class="card-overlay">
+            <div class="overlay-actions">
+                <button class="btn btn-sm btn-light view-project" type="button">View</button>
+                <a class="btn btn-sm btn-outline-light" href="https://tgbtgbanaba.org" target="_blank" rel="noopener">Visit</a>
+            </div>
+            </div>
+            
+            <div class="project-body">
+            <div class="project-title">To God Be The Glory Banaba Church Website</div>
+            <div class="project-desc">A Website highlighting worship services, church updates, and ministry outreach for the local community.</div>
+            <div class="project-tags">
+                <span class="chip">PHP JS CSS</span>
+                <span class="chip">Church</span>
+                <span class="chip">Ministry</span>
+            </div>
+            </div>
+        </article>
+
+        
+
+          <!-- Cloud Migration
+          <article class="project-card" tabindex="0"
+            data-category="cloud"
+            data-title="Cloud Migration — On-prem → Cloud"
+            data-date="2024-08-05"
+            data-tags="AWS,Migration,Security"
+            data-desc="Migrated critical services to cloud with improved redundancy, backups, and hardened IAM."
+            data-images='["https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80","https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80","https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1600&q=80"]'
+            data-link="">
+            <img class="project-media" loading="lazy"
+                 src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+                 srcset="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80 1600w"
+                 alt="Cloud Migration">
+            <div class="card-overlay">
+              <div class="overlay-actions">
+                <button class="btn btn-sm btn-light view-project">View</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">Cloud Migration — On-prem → Cloud</div>
+              <div class="project-desc">Lift-and-shift with re-architecture for scalability and cost control.</div>
+              <div class="project-tags">
+                <span class="chip">AWS</span>
+                <span class="chip">Backups</span>
+                <span class="chip">IAM</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- System Automation
+          <article class="project-card" tabindex="0"
+            data-category="automation"
+            data-title="Automation — Backup & Monitoring"
+            data-date="2023-12-15"
+            data-tags="Bash,Backup,Monitoring"
+            data-desc="Automated nightly backups, integrated monitoring with alerting channels and recovery drills."
+            data-images='["https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80","https://images.unsplash.com/photo-1532619187606-6fb1bcd70f40?auto=format&fit=crop&w=1600&q=80","https://images.unsplash.com/photo-1517148815978-75f6acaaffd4?auto=format&fit=crop&w=1600&q=80"]'
+            data-link="">
+            <img class="project-media" loading="lazy"
+                 src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+                 srcset="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80 1600w"
+                 alt="Automation">
+            <div class="card-overlay">
+              <div class="overlay-actions">
+                <button class="btn btn-sm btn-light view-project">View</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">Automation — Backup & Monitoring</div>
+              <div class="project-desc">Reduced manual maintenance by 65% with scripted workflows & alerts.</div>
+              <div class="project-tags">
+                <span class="chip">Bash</span>
+                <span class="chip">Nagios</span>
+                <span class="chip">Backups</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- DevOps (Docker/K8s) 
+          <article class="project-card" tabindex="0"
+            data-category="devops"
+            data-title="Containerization — Docker & Kubernetes"
+            data-date="2024-03-02"
+            data-tags="Docker,Kubernetes,CI/CD"
+            data-desc="Packaged apps with Docker and orchestrated deployments using Kubernetes + GitOps CI/CD."
+            data-images='["https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1600&q=80","https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80","https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80"]'
+            data-link="">
+            <img class="project-media" loading="lazy"
+                 src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80"
+                 srcset="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1600&q=80 1600w"
+                 alt="Docker Kubernetes">
+            <div class="card-overlay">
+              <div class="overlay-actions">
+                <button class="btn btn-sm btn-light view-project">View</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">Containerization — Docker & Kubernetes</div>
+              <div class="project-desc">Streamlined deployments and rollbacks with container strategy and CI pipelines.</div>
+              <div class="project-tags">
+                <span class="chip">Docker</span>
+                <span class="chip">K8s</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Security Audit 
+          <article class="project-card" tabindex="0"
+            data-category="security"
+            data-title="Security Audit & Hardening"
+            data-date="2023-06-28"
+            data-tags="Audit,Hardening,Patch"
+            data-desc="Performed full security audits, remediations, and built a patch cadence and monitoring playbook."
+            data-images='["https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80","https://images.unsplash.com/photo-1558021212-ff1f2a1a8a4c?auto=format&fit=crop&w=1600&q=80","https://images.unsplash.com/photo-1504805572947-34fad45aed93?auto=format&fit=crop&w=1600&q=80"]'
+            data-link="">
+            <img class="project-media" loading="lazy"
+                 src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80"
+                 srcset="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80 1600w"
+                 alt="Security Audit">
+            <div class="card-overlay">
+              <div class="overlay-actions">
+                <button class="btn btn-sm btn-light view-project">View</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">Security Audit & Hardening</div>
+              <div class="project-desc">Identified and fixed attack surface issues and implemented secure access controls.</div>
+              <div class="project-tags">
+                <span class="chip">Audit</span>
+                <span class="chip">Hardening</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- E-Commerce site -->
+        <article class="project-card" tabindex="0"
+            data-category="manufacturing"
+            data-title="Tsukiden Electric Industries Philippines"
+            data-date="2025-04-03"
+            data-tags="EMS,Manufacturing,Control Panels"
+            data-desc="Established in 2014, Tsukiden Electric Industries Philippines provides end-to-end electronic manufacturing services—surface-mount tech, panel assembly, quality testing, and value-added logistics."
+            data-images='[
+            "https://tsukiden-industries.com/path/to/facility-image.jpg",
+            "https://tsukiden-industries.com/path/to/control-panel-assembly.jpg",
+            "https://tsukiden-industries.com/path/to/news-event.jpg"
+            ]'
+            data-link="https://tsukiden-industries.com">
+        
+        <img class="project-media" loading="lazy"
+            src="https://tsukiden-industries.com/path/to/facility-image.jpg"
+            srcset="https://tsukiden-industries.com/path/to/facility-image.jpg 900w, https://tsukiden-industries.com/path/to/facility-image.jpg 1600w"
+            alt="Tsukiden Electric Industries Philippines Facility">
+        
+        <div class="card-overlay">
+            <div class="overlay-actions">
+            <button class="btn btn-sm btn-light view-project" type="button">View</button>
+            <a class="btn btn-sm btn-outline-light" href="https://tsukiden-industries.com" target="_blank" rel="noopener">Visit</a>
+            </div>
+        </div>
+        
+        <div class="project-body">
+            <div class="project-title">Tsukiden Electric Industries Philippines</div>
+            <div class="project-desc">
+            An end-to-end EMS provider offering wiring and box-build assembly, SMT, quality inspections, and turnkey logistics to support diverse industries.
+            </div>
+            <div class="project-tags">
+            <span class="chip">EMS</span>
+            <span class="chip">Manufacturing</span>
+            <span class="chip">Quality Testing</span>
+            </div>
+        </div>
+        </article>
+
+
+          <!-- Monitoring Dashboard 
+          <article class="project-card" tabindex="0"
+            data-category="automation"
+            data-title="Monitoring Dashboard & Alerts"
+            data-date="2024-01-09"
+            data-tags="Grafana,Alerting,Dashboard"
+            data-desc="Built an observability dashboard for system metrics and application KPIs with alerting channels."
+            data-images='["https://images.unsplash.com/photo-1517148815978-75f6acaaffd4?auto=format&fit=crop&w=1600&q=80","https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80","https://images.unsplash.com/photo-1526378723886-1c4a6b6a9909?auto=format&fit=crop&w=1600&q=80"]'
+            data-link="">
+            <img class="project-media" loading="lazy"
+                 src="https://images.unsplash.com/photo-1517148815978-75f6acaaffd4?auto=format&fit=crop&w=900&q=80"
+                 srcset="https://images.unsplash.com/photo-1517148815978-75f6acaaffd4?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1517148815978-75f6acaaffd4?auto=format&fit=crop&w=1600&q=80 1600w"
+                 alt="Monitoring">
+            <div class="card-overlay">
+              <div class="overlay-actions">
+                <button class="btn btn-sm btn-light view-project">View</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">Monitoring Dashboard & Alerts</div>
+              <div class="project-desc">Single-pane visibility into uptime, latency, and error rates — with alerting playbooks.</div>
+              <div class="project-tags">
+                <span class="chip">Grafana</span>
+                <span class="chip">Alerts</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Add more cards here -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Project Modal (lightbox + carousel populated dynamically) -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content" style="border-radius:14px;overflow:hidden">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="projectModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div id="projectCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators"></div>
+            <div class="carousel-inner"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div class="p-4">
+            <p id="projectDescription" class="mb-2 text-muted"></p>
+            <div id="projectBadges" class="mb-3"></div>
+            <a id="projectExternal" class="btn btn-gradient" href="#" target="_blank" rel="noopener" style="display:none">Open Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Modal (same simple mailto form as your index) -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="background: rgba(15,15,30,0.95); border: none; border-radius: 20px;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white fw-bold" id="contactModalLabel">Get In Touch</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm" class="p-3">
+            <div class="mb-3">
+              <label for="name" class="form-label fw-semibold text-light">Your Name</label>
+              <input type="text" class="form-control custom-input" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label fw-semibold text-light">Your Email</label>
+              <input type="email" class="form-control custom-input" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label fw-semibold text-light">Your Message</label>
+              <textarea class="form-control custom-input" id="message" rows="4" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-gradient px-5 py-2">🚀 Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (same as index) -->
+  <footer class="py-4 mt-auto bg-dark">
+    <div class="container px-3 px-md-4">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-auto">
+          <p class="small mb-0">&copy; JohnMarkTolentino 2025</p>
+        </div>
+        <div class="col-auto">
+          <a href="https://www.facebook.com/the.great.great.jm/" target="_blank" class="text-decoration-none me-3">
+            <i class="fab fa-facebook fa-lg me-1"></i> Facebook
+          </a>
+          <a href="https://www.linkedin.com/in/john-mark-tolentino-8757b0246/" target="_blank" class="text-decoration-none">
+            <i class="fab fa-linkedin fa-lg me-1"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" aria-label="Back to top" style="position:fixed;right:18px;bottom:18px;z-index:1040;width:46px;height:46px;border-radius:999px;border:none;display:grid;place-items:center;background:rgba(15,23,42,.9);color:#fff;box-shadow:0 10px 24px rgba(2,6,23,.35);">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // IntersectionObserver reveal (same as index)
+    (function(){
+      const els = document.querySelectorAll('[data-animate]');
+      if(!('IntersectionObserver' in window)){ els.forEach(el=>el.classList.add('visible')); return; }
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+      els.forEach(el=>io.observe(el));
+    })();
+
+    // Back to top
+    (function(){
+      const btn = document.getElementById('backToTop');
+      const toggle = () => { if(window.scrollY > 400){ btn.style.opacity = 1 } else { btn.style.opacity = 0 } };
+      window.addEventListener('scroll', toggle, { passive: true }); toggle();
+      btn.addEventListener('click', ()=> window.scrollTo({ top: 0, behavior: 'smooth' }));
+    })();
+
+    // Contact form -> mailto (same behavior as index)
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      const subject = encodeURIComponent("New message from " + name);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+      window.location.href = `mailto:tech.tolentinojohnmark@gmail.com?subject=${subject}&body=${body}`;
+    });
+
+    // Filtering, Search & Sorting
+    (function(){
+      const grid = document.getElementById('projectsGrid');
+      const cards = Array.from(grid.querySelectorAll('.project-card'));
+      const filterButtons = document.querySelectorAll('[data-filter]');
+      const searchInput = document.getElementById('searchInput');
+      const sortSelect = document.getElementById('sortSelect');
+
+      let activeFilter = 'all';
+      let query = '';
+
+      function matches(card){
+        // filter by category
+        const cats = card.dataset.category ? card.dataset.category.toLowerCase().split(',') : [];
+        const catOk = (activeFilter === 'all') || cats.includes(activeFilter);
+        // search by title/tags/desc
+        const hay = (card.dataset.title + ' ' + card.dataset.tags + ' ' + card.dataset.desc).toLowerCase();
+        const searchOk = hay.includes(query);
+        return catOk && searchOk;
+      }
+
+      function render(){
+        // show/hide cards
+        cards.forEach(c => c.style.display = matches(c) ? '' : 'none');
+      }
+
+      // attach filter buttons
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b=>b.classList.remove('active'));
+          btn.classList.add('active');
+          activeFilter = btn.dataset.filter;
+          render();
+        });
+      });
+
+      // search with debounce
+      let timer;
+      searchInput.addEventListener('input', (e) => {
+        clearTimeout(timer);
+        timer = setTimeout(()=>{ query = e.target.value.trim().toLowerCase(); render(); }, 180);
+      });
+
+      // sorting
+      sortSelect.addEventListener('change', () => {
+        const val = sortSelect.value;
+        const visible = cards.filter(c => c.style.display !== 'none');
+        const sorted = visible.slice().sort((a,b)=>{
+          if(val==='newest'||val==='oldest'){
+            const da = new Date(a.dataset.date || '1970-01-01');
+            const db = new Date(b.dataset.date || '1970-01-01');
+            return val==='newest' ? db-da : da-db;
+          } else if(val==='az' || val==='za'){
+            const ta = a.dataset.title.toLowerCase(), tb = b.dataset.title.toLowerCase();
+            return val==='az' ? ta.localeCompare(tb) : tb.localeCompare(ta);
+          }
+          return 0;
+        });
+        // append sorted visible ones in order
+        sorted.forEach(c => grid.appendChild(c));
+      });
+
+      // initial render
+      render();
+    })();
+
+    // Modal & carousel population
+    (function(){
+      const projectModal = new bootstrap.Modal(document.getElementById('projectModal'), {keyboard: true});
+      const modalEl = document.getElementById('projectModal');
+      const modalTitle = document.getElementById('projectModalLabel');
+      const carouselIndicators = document.querySelector('#projectCarousel .carousel-indicators');
+      const carouselInner = document.querySelector('#projectCarousel .carousel-inner');
+      const projectDesc = document.getElementById('projectDescription');
+      const projectBadges = document.getElementById('projectBadges');
+      const projectExternal = document.getElementById('projectExternal');
+
+      function clearCarousel(){
+        carouselIndicators.innerHTML = '';
+        carouselInner.innerHTML = '';
+      }
+
+      function buildCarousel(images){
+        clearCarousel();
+        images.forEach((src, idx) => {
+          // indicator
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.setAttribute('data-bs-target','#projectCarousel');
+          btn.setAttribute('data-bs-slide-to', idx);
+          if(idx===0) btn.classList.add('active');
+          btn.setAttribute('aria-label','Slide ' + (idx+1));
+          carouselIndicators.appendChild(btn);
+
+          // item
+          const item = document.createElement('div');
+          item.className = 'carousel-item' + (idx===0 ? ' active' : '');
+          const img = document.createElement('img');
+          img.className = 'd-block w-100 modal-img';
+          img.loading = 'lazy';
+          img.decoding = 'async';
+          img.src = src + "&auto=format&fit=crop&w=1600&q=80";
+          img.alt = "Project image " + (idx+1);
+          item.appendChild(img);
+          carouselInner.appendChild(item);
+        });
+      }
+
+      document.addEventListener('click', function(e){
+        const btn = e.target.closest('.view-project');
+        if(!btn) return;
+        const card = btn.closest('.project-card');
+        if(!card) return;
+
+        const title = card.dataset.title || '';
+        const desc = card.dataset.desc || '';
+        const tags = (card.dataset.tags || '').split(',').map(t=>t.trim()).filter(Boolean);
+        const images = (() => {
+          try {
+            return JSON.parse(card.dataset.images);
+          } catch (err) {
+            return [];
+          }
+        })();
+        const link = card.dataset.link || '';
+
+        modalTitle.textContent = title;
+        projectDesc.textContent = desc;
+        projectBadges.innerHTML = '';
+        tags.forEach(t => {
+          const sp = document.createElement('span');
+          sp.className = 'badge-tag me-2';
+          sp.textContent = t;
+          projectBadges.appendChild(sp);
+        });
+
+        if(images.length) buildCarousel(images);
+        else clearCarousel();
+
+        if(link){
+          projectExternal.href = link;
+          projectExternal.style.display = 'inline-block';
+        } else {
+          projectExternal.style.display = 'none';
+        }
+
+        // show modal
+        projectModal.show();
+      });
+
+      // when modal closes, stop carousel (helps release resources)
+      modalEl.addEventListener('hidden.bs.modal', () => {
+        // ensure carousel resets to first slide
+        const firstIndicator = carouselIndicators.querySelector('button');
+        if(firstIndicator) firstIndicator.click();
+      });
+    })();
+  </script>
+</body>
+</html>
