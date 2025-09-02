@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="Delegate tasks and grow your business with Sarah Ricalde, Virtual Assistant." />
-  <meta name="author" content="Sarah Ricalde" />
-  <title>Sarah Ricalde</title>
+  <meta name="description" content="Offload IT tasks and grow your business with John Mark Tolentino, Virtual Assistant." />
+  <meta name="author" content="John Mark Tolentino" />
+  <title>John Mark Tolentino</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -22,274 +22,249 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Custom Styles -->
-  <style>
-    :root{
-      --bg: #ffffff;
-      --text: #0f172a;
-      --muted: #64748b;
-      --primary: #4f46e5;
-      --primary-2: #3b82f6;
-      --shadow: 0 10px 30px rgba(2, 6, 23, 0.10);
-      --radius-xl: 18px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.7;
-      background: var(--bg);
-      color: var(--text);
-    }
-
-    /* Navbar */
-    .navbar {
-      background: rgba(2, 6, 23, 0.92);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-    .navbar .nav-link {
-      position: relative;
-    }
-    .navbar .nav-link.active::after,
-    .navbar .nav-link:hover::after{
-      content:"";
-      position:absolute; left:0; right:0; bottom:-6px; height:2px;
-      background: linear-gradient(90deg, var(--primary), var(--primary-2));
-      border-radius: 2px;
-    }
-
-    /* Hero Section */
-/* Hero Section */
-header {
-  position: relative;
-  min-height: 88vh;
-  display: grid;
-  align-items: center;
-  color: white;
-  padding: 8rem 0 6rem;
-  overflow: clip;
-  background:
-    radial-gradient(1200px 600px at -10% -20%, rgba(79,70,229,0.35), transparent 60%),
-    radial-gradient(1000px 480px at 110% 20%, rgba(59,130,246,0.35), transparent 55%),
-    linear-gradient(rgba(15,23,42,0.55), rgba(15,23,42,0.55)),
-    url('https://images.unsplash.com/photo-1573497019511-7d4b2a7a6c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-}
-
-/* Background image with blur */
-/* Hero Section */
-header {
-  position: relative;
-  min-height: 88vh;
-  display: grid;
-  align-items: center;
-  color: white;
-  padding: 8rem 0 6rem;
-  overflow: hidden;
-  background: none; /* remove gradients */
-}
-
-/* Laptop image blurred as background */
-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url('https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&w=1600&q=80')
-    center/cover no-repeat;
-  filter: blur(14px) brightness(0.65);
-  transform: scale(1.08); /* fixes edge cutoff from blur */
-  z-index: -2;
-}
-
-/* Dark overlay for better text contrast */
-header::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(15, 23, 42, 0.55);
-  z-index: -1;
-}
-
-
-    header h1 { font-weight: 700; letter-spacing: -0.5px; }
-    .hero-card{
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-      padding: 1rem 1.25rem;
-      display: inline-flex;
-      gap: .6rem;
-      align-items: center;
-      backdrop-filter: blur(6px);
-    }
-    .hero-card i{ font-size: 1.1rem; }
-
-    /* Section Styling */
-    section { padding: 5rem 0; scroll-margin-top: 100px; }
-    section:nth-of-type(even) { background: #f8fafc; }
-
-    /* Section titles */
-    h2 {
-      font-weight: 700;
-      letter-spacing: -0.4px;
-      position: relative;
-      display: inline-block;
-    }
-    h2::after{
-      content:"";
-      display:block;
-      width: 60%;
-      height: 4px;
-      margin-top: .5rem;
-      background: linear-gradient(90deg, var(--primary), var(--primary-2));
-      border-radius: 999px;
-    }
-
-    /* Cards */
-    .card {
-      border: 1px solid #e5e7eb;
-      border-radius: var(--radius-xl);
-      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color .35s ease;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 50px rgba(2,6,23,.12);
-      border-color: rgba(79,70,229,0.3);
-    }
-    .card-img-top{
-      aspect-ratio: 16/10;
-      object-fit: cover;
-    }
-
-    /* Numbers */
-    .stat {
-      display: grid;
-      gap: .2rem;
-      place-items: center;
-      padding: 1.6rem 1rem;
-    }
-    .stat h3{
-      font-size: clamp(1.8rem, 3vw, 2.2rem);
-      font-weight: 800;
-      margin: 0;
-      background: linear-gradient(90deg, var(--primary), var(--primary-2));
-      -webkit-background-clip: text; background-clip: text;
-      color: transparent;
-    }
-    .stat p{ color: var(--muted); margin: 0; }
-
-    /* Buttons */
-    .btn-primary {
-      background: linear-gradient(90deg, var(--primary), var(--primary-2));
-      border: none;
-      border-radius: 12px;
-      padding: .75rem 1.25rem;
-      box-shadow: 0 10px 24px rgba(59,130,246,0.25);
-      transition: transform .15s ease, box-shadow .25s ease, filter .25s ease;
-    }
-    .btn-primary:hover { filter: brightness(1.05); transform: translateY(-1px); }
-
-    /* Animation */
-    [data-animate]{
-      opacity: 0; transform: translateY(26px) scale(.98);
-      transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
-    }
-    [data-animate].visible{ opacity: 1; transform: translateY(0) scale(1); }
-
-    /* About image ring */
-    .about-wrap{
-      position: relative; display: inline-block;
-      border-radius: 999px; isolation: isolate;
-    }
-    .about-wrap::after{
-      content:""; position:absolute; inset:-8px;
-      background: conic-gradient(from 180deg, var(--primary), var(--primary-2), var(--primary));
-      border-radius: 999px; z-index: -1; filter: blur(8px); opacity: .25;
-    }
-    .about-img {
-      max-width: 360px; width: 100%;
-      border: 5px solid white; border-radius: 999px;
-      box-shadow: 0 18px 50px rgba(2,6,23,.18);
-    }
-
-    /* Testimonials */
-    .testimonial{ font-style: italic; color: #475569; }
-    .quote-mark{
-      font-size: 2rem; line-height: 1; opacity: .22;
-    }
-
-    /* Footer */
-    footer { background: #0b1020; color: #94a3b8; }
-    footer a { color: #cbd5e1; text-decoration: none; }
-    footer a:hover { color: #fff; }
-
-    /* Back to top (icon-only, no visible text) */
-    #backToTop{
-      position: fixed; right: 18px; bottom: 18px; z-index: 1040;
-      width: 46px; height: 46px; border-radius: 999px; border: none;
-      display: grid; place-items: center; cursor: pointer;
-      background: rgba(15,23,42,.9); color: #fff;
-      box-shadow: 0 10px 24px rgba(2,6,23,.35);
-      opacity: 0; visibility: hidden; transform: translateY(12px);
-      transition: opacity .25s, transform .25s, visibility .25s;
-    }
-    #backToTop.show{ opacity: 1; visibility: visible; transform: translateY(0); }
-
-    /* Responsive helpers */
-    @media (max-width: 991.98px){
-      header{ min-height: 76vh; padding-top: 7rem; }
-    }
-
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce){
-      *{ transition: none !important; scroll-behavior: auto; }
-      [data-animate]{ opacity: 1 !important; transform: none !important; }
-    }
-  </style>
-
- <style>/*videos*/
-  /* Coaches Grid */
-  .coaches-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+  <!-- Improved Custom Styles -->
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --primary: #4f46e5;
+    --primary-2: #3b82f6;
+    --shadow: 0 10px 30px rgba(2, 6, 23, 0.10);
+    --radius-xl: 18px;
+    --transition: all 0.3s ease;
   }
 
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  /* Navbar */
+  .navbar {
+    background: rgba(2, 6, 23, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: var(--shadow);
+  }
+  .navbar .nav-link {
+    position: relative;
+    color: #fff;
+    transition: var(--transition);
+  }
+  .navbar .nav-link.active::after,
+  .navbar .nav-link:hover::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -6px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-2));
+    border-radius: 2px;
+  }
+
+  /* Hero Section */
+  header {
+    position: relative;
+    min-height: 90vh;
+    display: grid;
+    align-items: center;
+    color: white;
+    padding: 8rem 0 6rem;
+    overflow: hidden;
+    text-align: center;
+  }
+  header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&w=1600&q=80')
+      center/cover no-repeat;
+    filter: blur(14px) brightness(0.65);
+    transform: scale(1.08);
+    z-index: -2;
+  }
+  header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    z-index: -1;
+  }
+  header h1 { font-weight: 700; letter-spacing: -0.5px; }
+
+  .hero-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow);
+    padding: 1rem 1.25rem;
+    display: inline-flex;
+    gap: .6rem;
+    align-items: center;
+    backdrop-filter: blur(6px);
+    margin-top: 1rem;
+  }
+
+  /* Section Styling */
+  section { padding: 5rem 0; scroll-margin-top: 100px; }
+  section:nth-of-type(even) { background: #f8fafc; }
+  h2 {
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+  h2::after {
+    content:"";
+    display:block;
+    width: 60%;
+    height: 4px;
+    margin-top: .5rem;
+    background: linear-gradient(90deg, var(--primary), var(--primary-2));
+    border-radius: 999px;
+  }
+
+  /* Cards */
+  .card {
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(2,6,23,.12);
+    border-color: rgba(79,70,229,0.3);
+  }
+  .card-img-top {
+    aspect-ratio: 16/10;
+    object-fit: cover;
+  }
+
+  /* Stats */
+  .stat {
+    display: grid;
+    gap: .2rem;
+    place-items: center;
+    padding: 1.6rem 1rem;
+  }
+  .stat h3 {
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--primary), var(--primary-2));
+    -webkit-background-clip: text; color: transparent;
+  }
+  .stat p { color: var(--muted); }
+
+  /* Buttons */
+  .btn-primary {
+    background: linear-gradient(90deg, var(--primary), var(--primary-2));
+    border: none;
+    border-radius: 12px;
+    padding: .75rem 1.25rem;
+    box-shadow: 0 10px 24px rgba(59,130,246,0.25);
+    transition: var(--transition);
+    color: #fff;
+    font-weight: 500;
+  }
+  .btn-primary:hover { filter: brightness(1.05); transform: translateY(-2px); }
+
+  /* Animation */
+  [data-animate] {
+    opacity: 0; transform: translateY(26px) scale(.98);
+    transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+  }
+  [data-animate].visible { opacity: 1; transform: translateY(0) scale(1); }
+
+  /* About Image */
+  .about-wrap {
+    position: relative; display: inline-block;
+    border-radius: 999px; isolation: isolate;
+  }
+  .about-wrap::after {
+    content:""; position:absolute; inset:-8px;
+    background: conic-gradient(from 180deg, var(--primary), var(--primary-2), var(--primary));
+    border-radius: 999px; z-index: -1; filter: blur(8px); opacity: .25;
+  }
+  .about-img {
+    max-width: 360px; width: 100%;
+    border: 5px solid white; border-radius: 999px;
+    box-shadow: 0 18px 50px rgba(2,6,23,.18);
+  }
+
+  /* Testimonials */
+  .testimonial { font-style: italic; color: #475569; }
+  .quote-mark { font-size: 2rem; opacity: .22; }
+
+  /* Footer */
+  footer { background: #0b1020; color: #94a3b8; padding: 2rem 0; }
+  footer a { color: #cbd5e1; text-decoration: none; transition: var(--transition); }
+  footer a:hover { color: #fff; }
+
+  /* Back to top button */
+  #backToTop {
+    position: fixed; right: 18px; bottom: 18px; z-index: 1040;
+    width: 46px; height: 46px; border-radius: 999px; border: none;
+    display: grid; place-items: center; cursor: pointer;
+    background: rgba(15,23,42,.9); color: #fff;
+    box-shadow: 0 10px 24px rgba(2,6,23,.35);
+    opacity: 0; visibility: hidden; transform: translateY(12px);
+    transition: var(--transition);
+  }
+  #backToTop.show { opacity: 1; visibility: visible; transform: translateY(0); }
+
+  /* Video Grid */
+  .coaches-grid {
+    display: grid; gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
   .coach-card {
     background: white;
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
   }
+  .coach-card:hover { transform: translateY(-4px); }
 
-  /* Video Styling */
   .video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    overflow: hidden;
-    border-radius: 10px;
-    margin-top: 1rem;
+    position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+    border-radius: 10px; margin-top: 1rem;
   }
   .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
   }
 
-  /* Responsive for mobile */
-  @media (max-width: 768px) {
-    .coaches-grid {
-      grid-template-columns: 1fr;
-    }
+  /* Skillsets Grid */
+  .systems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+  }
+  .systems-grid img {
+    width: 100px; height: 60px; object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  .systems-grid img:hover { transform: scale(1.1); }
+
+  /* Responsive */
+  @media (max-width: 991.98px) {
+    header { min-height: 76vh; padding-top: 7rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; scroll-behavior: auto; }
+    [data-animate] { opacity: 1 !important; transform: none !important; }
   }
 </style>
+
 
 <style>
   /* Skillsets */
@@ -332,7 +307,7 @@ header::after {
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
     <div class="container px-3 px-md-4">
-      <a class="navbar-brand fw-bold" href="#">Sarah Ricalde</a>
+      <a class="navbar-brand fw-bold" href="#">John Mark Tolentino</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -356,21 +331,21 @@ header::after {
       <div class="col-lg-7" data-animate>
         <div class="hero-card mb-3">
           <i class="bi bi-lightning-charge-fill"></i>
-          <span class="small">Virtual Assistant • Coach Administrative Associate • Course Creator Designer</span>
+          <span class="small">IT Virtual Assistant • Tech Support • Web Admin • Systems Specialist</span>
         </div>
         <h1 class="display-4 fw-bold mb-3">
-          Delegate the details.<br>Focus on growing your business.
+         Offload IT tasks.<br>I’ll handle the tech, you lead the way.
         </h1>
         <p class="lead mb-4">
-          I take care of the tasks that drain your time so you can stay focused on clients, growth, and strategy.
+          I handle your IT support, system management, website maintenance, and tech tasks, so you can focus on growth and strategy.
         </p>
-        <a class="btn btn-primary btn-lg px-4" href="https://calendly.com/ricaldesara/connect">Book a Free Call</a>
+        <a class="btn btn-primary btn-lg px-4" href="#contact">Book a Free Call</a>
       </div>
 
       <div class="col-lg-5 text-center mt-2 mt-lg-0" data-animate>
         <img 
-          src="pics/sarah4.JPG" 
-          alt="Modern laptop workspace"
+          src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&w=800&q=80" 
+          alt="IT Virtual Assistant workspace"
           class="img-fluid rounded-3 shadow"
           style="max-width: 520px; width: 100%; object-fit: cover;">
       </div>
@@ -381,34 +356,28 @@ header::after {
 
 
 
-    <!-- About -->
-    <section id="about">
-      <div class="container px-3 px-md-4">
-        <div class="row align-items-center gy-5">
-          <div class="col-lg-5 text-center" data-animate>
-            <div class="about-wrap">
-<picture>
-  <source srcset="pics/sarah2.JPG" media="(min-width: 992px)">
-  <img 
-    src="pics/sarah2.JPG" 
-    alt="Anonymous profile picture" 
-    class="about-img" 
-    loading="lazy" 
-    decoding="async">
-</picture>
-
-
-            </div>
-          </div>
-          <div class="col-lg-7" data-animate>
-            <h2 class="fw-bold mb-4">About Me</h2>
-            <p class="lead">Running a business doesn’t mean doing everything yourself. The more you juggle, the less space you have for growth. That’s where I come in.</p>
-            <p>I’m here so you can delegate the tasks that slow you down — content, podcasts, invoices, systems, scheduling, and more. My role is to keep the day-to-day details moving, while you stay focused on clients, strategy, and growth.</p>
-            <p>When you delegate, you gain back hours each week, lower your stress, and create room for your business to expand.</p>
-          </div>
+<!-- About -->
+<section id="about">
+  <div class="container px-3 px-md-4">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-5 text-center" data-animate>
+        <div class="about-wrap">
+          <img 
+            src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80" 
+            alt="IT VA profile" 
+            class="about-img" 
+            loading="lazy" 
+            decoding="async">
         </div>
       </div>
-    </section>
+      <div class="col-lg-7" data-animate>
+        <h2 class="fw-bold mb-4">About Me</h2>
+        <p class="lead">Tech tasks taking your time? Let me handle them.</p>
+        <p>I’m an IT Virtual Assistant specializing in technical support, website maintenance, cloud services, data management, and system optimization. I make sure your IT operations run smoothly so you can focus on scaling your business.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Numbers -->
     <section class="bg-light text-center">
@@ -452,62 +421,73 @@ header::after {
       </div>
     </section>
 
-    <!-- Services -->
-    <section id="services">
-      <div class="container px-3 px-md-4">
-        <div class="text-center mb-5">
-          <h2 class="fw-bold">What You Can Delegate to Me</h2>
-          <p class="lead">Free up your time and focus on growth while I handle the details.</p>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-4" data-animate>
-            <div class="card h-100">
-              <img src="pics/sarah1.JPG" class="card-img-top" alt="Content and Marketing" loading="lazy" decoding="async">
-              <div class="card-body">
-                <h4 class="fw-bold text-primary mb-3"><i class="bi bi-megaphone"></i> Content & Marketing</h4>
-                <ul class="list-unstyled mb-0">
-                  <li>Instagram content</li>
-                  <li>Podcast support</li>
-                  <li>Email marketing</li>
-                  <li>Graphics & PDFs</li>
-                  <li>Landing pages</li>
-                </ul>
-              </div>
-            </div>
+    >
           </div>
-          <div class="col-md-4" data-animate>
-            <div class="card h-100">
-              <img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Operations and Systems" loading="lazy" decoding="async">
-              <div class="card-body">
-                <h4 class="fw-bold text-success mb-3"><i class="bi bi-gear"></i> Operations & Systems</h4>
-                <ul class="list-unstyled mb-0">
-                  <li>Client onboarding</li>
-                  <li>Payments & invoices</li>
-                  <li>Automations</li>
-                  <li>Workflow setup</li>
-                  <li>Data management</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4" data-animate>
-            <div class="card h-100">
-              <img src="pics/sarah3.jpeg" class="card-img-top" alt="Admin and Support" loading="lazy" decoding="async">
-              <div class="card-body">
-                <h4 class="fw-bold text-danger mb-3"><i class="bi bi-person-lines-fill"></i> Admin & Support</h4>
-                <ul class="list-unstyled mb-0">
-                  <li>Calendar & inbox</li>
-                  <li>Lead organization</li>
-                  <li>Research</li>
-                  <li>Travel planning</li>
-                  <li>Event coordination</li>
-                </ul>
-              </div>
-            </div>
+          <div cl<!-- Services -->
+<section id="services">
+  <div class="container px-3 px-md-4">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">IT Services I Offer</h2>
+      <p class="lead">Here’s what I can take off your plate:</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-animate>
+  <div class="card h-100">
+    <img src="https://images.unsplash.com/photo-1581090700227-4c4f50b0cabe?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" 
+         class="card-img-top" 
+         alt="Tech Support">
+    <div class="card-body">
+      <h4 class="fw-bold text-primary mb-3"><i class="bi bi-tools"></i> Tech Support</h4>
+      <ul class="list-unstyled mb-0">
+        <li>Remote troubleshooting</li>
+        <li>Software installation</li>
+        <li>Cloud setup & backups</li>
+        <li>Network monitoring</li>
+        <li>VPN support</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4" data-animate>
+  <div class="card h-100">
+    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" 
+         class="card-img-top" 
+         alt="Web & Systems">
+    <div class="card-body">
+      <h4 class="fw-bold text-success mb-3"><i class="bi bi-window"></i> Web & Systems</h4>
+      <ul class="list-unstyled mb-0">
+        <li>Website management</li>
+        <li>Domain & hosting</li>
+        <li>System automation</li>
+        <li>Database support</li>
+        <li>Security updates</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+      <div class="col-md-4" data-animate>
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Admin">
+          <div class="card-body">
+            <h4 class="fw-bold text-danger mb-3"><i class="bi bi-hdd-network"></i> IT Admin</h4>
+            <ul class="list-unstyled mb-0">
+              <li>User account setup</li>
+              <li>Helpdesk services</li>
+              <li>Documentation</li>
+              <li>Asset management</li>
+              <li>Email & workspace setup</li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+
+
 
     <section id="systems" class="py-16 bg-white">
   <div class="container mx-auto px-4 text-center">
